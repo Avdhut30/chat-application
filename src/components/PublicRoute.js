@@ -13,7 +13,7 @@ const PublicRoute = ({ children, ...routeProps }) => {
       </Container>
     );
   }
-  if (!profile && !isLoading) {
+  if (profile && !isLoading) {
     return <Redirect to="/signin" />;
   }
 
