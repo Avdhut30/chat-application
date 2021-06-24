@@ -11,7 +11,7 @@ const SignIn = () => {
       if (additionalUserInfo.isNewUser) {
         await database.ref(`/profiles/${user.uid}`).set({
           name: user.displayName,
-          createAt: firebase.database.ServerValue.TIMESTAMP,
+          createdAt: firebase.database.ServerValue.TIMESTAMP, // <------- attach createdAt
         });
       }
 
