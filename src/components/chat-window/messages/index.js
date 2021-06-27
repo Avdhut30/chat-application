@@ -66,7 +66,7 @@ const Messages = () => {
           msg.likes[uid] = null;
           alertMsg = 'Like removed';
         } else {
-          msg.likeCount += 1;
+          msg.likeCount = null + 1;
 
           if (!msg.likes) {
             msg.likes = {};
